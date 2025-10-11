@@ -31,7 +31,23 @@ Cameron Wheatley's professional portfolio
 
 # Introduction
 
+Hi there, my name is Cameron, and I'd like to welcome you to my professional portfolio.
+
+Here you will find all the relevent documentation regarding my portfolio, the planning, the testing and everything in between!
+
+Feel free to look around, this is an open book and I am more than happy to answer any questions regarding steps taken when creating this project.
+
+Have fun!
+
 ## Overview
+
+As I am writing this I am still in the very early stages of planning what is to be my professional portfolio, and as I strive to become a better developer, I'm holding myself to some of the best development practises I have learnt - one of them being thorough and true documentation.
+
+From where I am currently standing, my portfolio will be the hub listing all of my projects and websites, from small problem-solving apps I have built for my own personal gain, to collaborative projects I contributed to whilst participating in Code Institute Hackathons. I want this portfolio to be a representation of me - solid, clear with a purpose, yet still plenty of room to grow in size!
+
+One of the biggest problems I face as a developer is the excitement I experience when snowballing ideas - now that may sound great to some developers, but to me, not so much. I often forget to walk before I can run, my ideas run me wild and before I know it I am brainstorming ideas which no longer relate to the initial project at hand.
+
+So, all I am asking is that you stick with me here, and hopefully this readme is sewing the seeds for an excellent portfolio which will eventually get me hired as a developer!
 
 ## Target Audience
 
