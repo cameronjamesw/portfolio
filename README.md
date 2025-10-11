@@ -51,6 +51,24 @@ So, all I am asking is that you stick with me here, and hopefully this readme is
 
 ## Target Audience
 
+I envisage my portfolio having two main categories of audience - potential clients and recruiters, and this is who I am tailoring my portfolio towards.
+
+**Recruiters**
+
+- My main audience will be recruiters and hiring managers - I want my portfolio to speak for me at the bare minimum, my portfolio should echo absolutely everything I stand for in the professional world.
+
+- With this, I want recruiters to easily infer my professional expertise from simply looking at the projects displayed on my portfolio. I expect my backend to be pristine and expertly coded in order to support my frontend application in the most optimal way possible. For example, I want users to have the ability to search for projects with parameters that matter most to them. Here I am referring to searching by language, or library and framework, instead of just the name of the project. This will allow recruiters to easily narrow down the skillset I harbour, and whether I am a perfect fit for their company.
+
+- Furthermore, I want to ensure that my website is secure from any form of manipulation or attacks through ensuring strict permissions throughout. I plan on having a singular admin user, that being me, who can only send POST, PUT and DELETE requests to the backend. In my mind, my portfolio should be a completely static website for everyone but myself.
+
+**Potential Clients**
+
+- The other demographic that I intend on appealing to are the potential clients - although my main focus of my portfolio is to appeal to recruiters and hiring managers, I also see great value in presenting my work to clients who are in need of my services. Besides, potential clients means more high quality websites I can add to my portfolio!
+
+- With this in mind, I plan on harbouring a portfolio which has a very minimalist yet professional look. I believe that less is more — now more than ever, this is true within the development industry. This is something which I have been keeping an eye on in the forefront of my mind whilst drafting up wireframes.
+
+- It's important to me that clients have a call to action, some form of contact form or contact details for myself, where clients can easily get in touch with me if they want to more forward.
+
 # Planning
 
 ## User Stories
