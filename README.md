@@ -45,7 +45,7 @@ Cameron Wheatley's professional portfolio
 
 - When considering the colour pallet for my portfolio, I wanted to lead with a rich gold colour. After doing plenty of research, I had settled on `#FEE175` as the base colour for the starting pallet, and I had intentions of building upon that. I experimented further with `#FEE175` and I began looking into darker shades and lighter hues of the colour in order to provide me with more depth when utilising the colour.
 
-- I created a brief colour pallet using [Coolars](https://coolars.com) showcasing the different shades and hues I had come across in order to begin experimenting with.
+- I created a brief colour pallet using [Coolors](https://coolors.com) showcasing the different shades and hues I had come across in order to begin experimenting with.
 
 - The colours below are by no means guaranteed to be featured in the portfolio, but it's a starting point which is what I am aiming for at the moment - a basis to build upon.
 
@@ -77,7 +77,7 @@ Cameron Wheatley's professional portfolio
 
 # Technologies Used
 
-- [Coolars](https://www.coolars.com) used to create the colour pallette.
+- [Coolors](https://www.coolors.com) used to create the colour pallette.
 
 ## Languages
 
