@@ -97,6 +97,12 @@ Cameron Wheatley's professional portfolio
 
 ![A screenshot of the projects detail wireframe within a desktop view](/assets/images/wireframes/project-detail-desktop.png)
 
+- Above is a screenshot of the project detail wireframe when viewing on a desktop.
+
+- The wireframe continues the professional look which I have been upholding throughout the project so far. A preview of the project is visible on the left hand side of the panel, and when clicking on the image the user will be directed to the live site. To the right of this, the user can find the name and the description of the project. Underneath this, the user has 3 buttons which they can interact with - view site, which will take them to the live site; view repo, which will take them to the GitHub Repository; and 'more...', which will display further information.
+
+- Within the 'more...' window, I plan on including meta data about the project which will be useful to recruiters, for example the languages, libraries and frameworks used when creating the project. This sort of information does not pose any benefit to a standard user, so I see it as futile including it on the initial page for all users to see.
+
 ### Mobile
 
 # Development
@@ -110,6 +116,8 @@ Cameron Wheatley's professional portfolio
 # Technologies Used
 
 - [Coolors](https://coolors.co) used to create the colour pallette.
+
+- [Figma](www.figma.com) used for creating wireframes
 
 ## Languages
 
