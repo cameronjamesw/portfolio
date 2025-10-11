@@ -65,6 +65,38 @@ Cameron Wheatley's professional portfolio
 
 ### Desktop
 
+- Below are the wireframes that I have created for the desktop views of what I would like the portfolio website to look like.
+
+- When designing the wireframes, I wanted to go into as much detail as possible. This would give me as much edge as possible when it comes to designing the backend - the backend is there to support the frontend, but the backend can only support the frontend if both are perfectly aligned, and I can ensure this through thorough planning.
+
+- As a side note, as discussed earlier within the colour pallettes section, the gray colouring has proven to be rather problematic when adding depth and levels to the project. In order to combat this, I plan on addding box shadows to layered elements in order to provide the illusion of depth to the user. This is visible within all of the screenshots below.
+
+![A screenshot of the homepage desktop wireframe](/assets/images/wireframes/home-page-desktop.png)
+
+- Here is the home page wireframe when viewing the portfolio on a desktop.
+
+- I want the portfolio to harbour a very minimalist yet professional look. In this day and age of website UI, less is more is definitely the case. 
+
+- Within the hero, the user can text which introduces me to them, along with my trade - website development, along with a photo of me. My thoughts here are that if users are able to put a face to the name, then the  website then has a much more personal feel to it, which may very well drive up leads.
+
+- Under this, I have a link to my social media for users to interact with - and underneath where it says 'For The Recruiters' I will have links to my LinkedIn and GitHUb, as this is what I imagine they will be looking for to begin with. 
+
+---
+
+![A screenshot of the projects list desktop wireframe](/assets/images/wireframes/project-list-desktop.png)
+
+- Above is a screenshot of the desktop wireframe of the project list view.
+
+- The user will be able to search for projects within the search bar, here the user can search based on names of the projects, languages and technologies used, along with where or not the project is a collaborative project.
+
+- The projects are laid out professionally, carrying on the theme discussed earlier using the gold and grey colour scheme. The names along with a short snippet and preview of the project will be seen by the user when viewing this page.
+
+- I plan on adding an infinite scroll feature to the project list - but being realistic, I'm not sure when this will become neccessary, as the amount of projects which I have currently is nowhere near the minimum threshold I plan on using for infinite scrolling.
+
+---
+
+![A screenshot of the projects detail wireframe within a desktop view](/assets/images/wireframes/project-detail-desktop.png)
+
 ### Mobile
 
 # Development
