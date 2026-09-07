@@ -139,6 +139,18 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 ### Mobile
 
+- Below are the wireframes I have created for the mobile element of my portfolio. I have stayed true to the desktop version, as I want there to be clear synergy between the mobile and desktop variants of the application.
+
+![A screenshot of the home page mobile wireframe](/assets/images/wireframes/Home%20Page%20Mobile.png)
+
+--- 
+
+![A screenshot of the project list mobile wireframe](/assets/images/wireframes/Project%20List%20Mobile.png)
+
+---
+
+![A screenshot of the project detail mobile wireframe](/assets/images/wireframes/Project%20Detail%20Mobile.png)
+
 # Development
 
 ## Agile
