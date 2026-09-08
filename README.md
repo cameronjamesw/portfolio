@@ -182,7 +182,9 @@ The certification model is the second largest model I plan to create for my port
 
 - [Coolors](https://coolors.co) used to create the colour pallette.
 
-- [Figma](www.figma.com) used for creating wireframes
+- [Figma](www.figma.com) used for creating wireframes.
+
+- [LucidChart](https://lucid.co/) used for creating database schemas.
 
 ## Languages
 
