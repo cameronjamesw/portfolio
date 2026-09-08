@@ -160,15 +160,19 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 #### Projects
 
-The largest model is the projects model, and this model will contain the information which relates to the portfolio projects I created whilst studying with the Code Institute. The projects model will be linked to the technologies model, and user will be able to filter projects based on the technologies used.
+- The largest model is the projects model, and this model will contain the information which relates to the portfolio projects I created whilst studying with the Code Institute. The projects model will be linked to the technologies model, and user will be able to filter projects based on the technologies used.
 
 #### Technologies
 
-The technologies model will be one of the smaller models within this project and it will serve as a means for filtering projects when users are looking at my portfolio.
+- The technologies model will be one of the smaller models within this project and it will serve as a means for filtering projects when users are looking at my portfolio.
 
 #### Certification
 
-The certification model is the second largest model I plan to create for my portfolio. It will contain 6 different fields with one field being tied to the skills model. The certifications model will also list the completion date of the certificate, the expiry date and the institution and live URL.
+- The certification model is the second largest model I plan to create for my portfolio. It will contain 6 different fields with one field being tied to the skills model. The certifications model will also list the completion date of the certificate, the expiry date and the institution and live URL.
+
+#### Skills
+
+- The final model which I have included is the skills model. This model documents the skills which I have learned throughout my journey, and ties them to physical projects for recruiters to see. I do not plan on adding any filter functionality to the skills model as I want to focus solely on creating the portfolio instead of adding countless dynmaic features.
 
 # Development
 
