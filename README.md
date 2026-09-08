@@ -144,13 +144,21 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 ![A screenshot of the home page mobile wireframe](/assets/images/wireframes/Home%20Page%20Mobile.png)
 
+- Here I have created the home page mobile wireframe to look as close to the desktop wireframe as possible. As stated earlier, I want there to be synergy between the mobile and desktop versions of the application. By collapsing the navbar into a hamburger icon, I have saved a lot of space in the header of the home page - I want the website to breathe and to not be too crowed for it's own good.
+
 --- 
 
 ![A screenshot of the project list mobile wireframe](/assets/images/wireframes/Project%20List%20Mobile.png)
 
+- For the project list mobile wireframe, there really is not much difference between the mobile and desktop views. The mobile view is essentially a collapsed version of the desktop wireframe - the only real difference here is that the project list is more condensed and looks very similar to the desktop. I am very satisfied with the fact there is no real difference between the two.
+
 ---
 
 ![A screenshot of the project detail mobile wireframe](/assets/images/wireframes/Project%20Detail%20Mobile.png)
+
+- This wireframe is a similar story to the project list wireframe in the sense that it is just a collapsed version of the desktop view. The presentation looks very smart since all of the elements are neatly stacked upon each other and the space is being utilised in the most efficient way.
+
+- I am unsure what to include within the 'more' button located at the bottom of the pannel. If not I will just remove it.
 
 ## Database
 
