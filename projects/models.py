@@ -14,6 +14,9 @@ class Project(models.Model):
     technologies = models.ManyToManyField("Technology", blank=True)
     skills = models.ManyToManyField("Skill", blank=True)
 
+    def __str__(self):
+        return self.title
+
 
 class Technology(models.Model):
 
@@ -33,6 +36,12 @@ class Technology(models.Model):
     )
     icon = models.CharField(max_length=100, blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Skill(models.Model):
     name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
