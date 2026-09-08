@@ -1,13 +1,20 @@
 :root {
     /* Color palette */
-    --bs-primary: #2d3142;
-    --bs-primary-rgb: 45, 49, 66;
-    --bs-secondary: #4f5d75;
-    --bs-secondary-rgb: 79, 93, 117;
-    --bs-body-color: #2d3142;
-    --bs-body-bg: #b7b71f;
-    --bs-link-color: #2d3142;
-    --bs-link-hover-color: #4f5d75;
+    --bs-primary: #eec643;
+    --bs-primary-rgb: 238, 198, 67;
+    --bs-secondary: #a0a4ab;
+    --bs-secondary-rgb: 160, 164, 171;
+    --bs-body-color: #d7d9dc;
+    --bs-body-bg: #1c1e22;
+    --bs-link-color: #eec643;
+    --bs-link-hover-color: #f5d876;
+
+    /* Accent used for highlighted words/spans and icons */
+    --accent: #eec643;
+    --accent-dark: #1c1e22;
+    --surface: #2a2d33;
+    --surface-border: #34373e;
+    --muted: #a0a4ab;
 
     /* Typography */
     --bs-body-font-family: 'Inter', -apple-system, sans-serif;
@@ -20,50 +27,154 @@
     --bs-border-radius-sm: 0.25rem;
 }
 
-/* Headings use the display font, set separately since Bootstrap
-   doesn't expose a heading-font variable */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Headings — bold, tight tracking, white by default */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #ffffff;
 }
 
-/* Buttons: use the CSS variable API on individual components */
-.btn-primary {
-    --bs-btn-bg: var(--bs-primary);
-    --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-bg: #23273350;
-    --bs-btn-hover-border-color: #232733;
-    --bs-btn-active-bg: #1a1d26;
-    --bs-btn-active-border-color: #1a1d26;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+/* Utility for highlighted words inside headings, e.g.
+   Hi, I'm <span class="text-accent">Cameron</span> */
+.text-accent {
+    color: var(--accent);
 }
 
-.btn {
-    padding: 0.6rem 1.5rem;
+.text-muted-custom {
+    color: var(--muted) !important;
 }
 
-/* Navbar: more breathing room, subtle shadow instead of border */
+/* ---------- Navbar ---------- */
 .navbar {
-    padding: 1.25rem 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem 0;
+    background-color: transparent;
 }
 
 .navbar-brand {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #ffffff !important;
 }
 
-/* Cards: softer shadow instead of a hard border, for project grids */
+.navbar-nav .nav-link {
+    color: #e7e8ea;
+    font-weight: 600;
+    margin: 0 0.9rem;
+    transition: color 0.15s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent);
+}
+
+/* ---------- Buttons ---------- */
+/* Pill-shaped accent button used for Contact / Projects / Contact CTA */
+.btn {
+    padding: 0.65rem 1.75rem;
+    font-weight: 700;
+    border-radius: 50rem; /* pill shape */
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary,
+.btn-accent {
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-color: #1c1e22;
+    --bs-btn-hover-bg: #f5d876;
+    --bs-btn-hover-border-color: #f5d876;
+    --bs-btn-hover-color: #1c1e22;
+    --bs-btn-active-bg: #e0b62f;
+    --bs-btn-active-border-color: #e0b62f;
+    --bs-btn-active-color: #1c1e22;
+    color: #1c1e22;
+}
+
+.btn-primary:hover,
+.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(238, 198, 67, 0.25);
+}
+
+/* Small nav "Contact" pill button, sits inline in the navbar */
+.btn-nav-cta {
+    padding: 0.5rem 1.4rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- Hero section ---------- */
+.hero {
+    padding: 5rem 0 3rem;
+}
+
+.hero-heading {
+    font-size: 2.25rem;
+    line-height: 1.3;
+}
+
+.hero-subtext {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 32rem;
+}
+
+/* Circular profile photo with a soft ring */
+.hero-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--surface-border);
+    box-shadow: 0 0 0 6px rgba(238, 198, 67, 0.08);
+}
+
+/* ---------- Social / recruiter icon buttons ---------- */
+.icon-group-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.9rem;
+    font-weight: 600;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    color: #d7d9dc;
+    margin-right: 0.6rem;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.icon-btn:hover {
+    background-color: var(--accent);
+    color: #1c1e22;
+    transform: translateY(-2px);
+}
+
+/* ---------- Cards (project grid, etc.) ---------- */
 .card {
-    border: none;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--bs-border-radius-lg);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }

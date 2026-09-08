@@ -1,7 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="hero-heading">
+          Hi, I'm <span class="text-accent">Cameron</span>, and I'm a
+          <span class="text-accent">Software Developer</span>
+        </h1>
+        <p class="hero-subtext">I take your business ideas and transform them into something special.</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'images/profile.jpg' %}" alt="Cameron Wheatley" class="hero-avatar">
+      </div>
+    </div>
 
-    <h1>Welcome to my portfolio</h1>
-
+    <div class="row mt-5">
+      <div class="col-auto">
+        <p class="icon-group-label">Find me with</p>
+        <a href="#" class="icon-btn"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="icon-btn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}
