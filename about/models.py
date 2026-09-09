@@ -85,8 +85,8 @@ class Experience(models.Model):
         null=True
     )
 
-    skills = models.ManyToManyField("Skill", blank=True)
-    technologies = models.ManyToManyField("Technology", blank=True)
+    skills = models.ManyToManyField(Skill, blank=True)
+    technologies = models.ManyToManyField(Technology, blank=True)
 
     display_order = models.PositiveIntegerField(default=0)
 
