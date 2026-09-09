@@ -178,3 +178,12 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
+
+/* Mobile screens */
+@media screen and (max-width: 576px) {
+    .hero-avatar {
+        width: 160px;
+        height: 160px;
+        box-shadow: 0 0 0 3px rgba(238, 198, 67, 0.08);
+    }
+}
