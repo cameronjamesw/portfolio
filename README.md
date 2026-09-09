@@ -198,6 +198,10 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 - [LucidChart](https://lucid.co/) used for creating database schemas.
 
+- [Claude](https://claude.com/) used for styling and debugging assistance.
+
+- [ChatGPT](https://chatgpt.com/) used for ERD configuraton and debugging assistance.
+
 ## Languages
 
 ## Libraries & Frameworks
@@ -209,6 +213,8 @@ I envisage my portfolio having two main categories of audience - potential clien
 # Credits
 
 ## Media
+
+- [Claude](https://claude.com/) used for styling assistance.
 
 ## Content
 
