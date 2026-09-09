@@ -29,9 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost',
-                 'git.heroku.com/my-portfolio-site.git',
-                 'my-portfolio-site-18dba687e2d2.herokuapp.com',
-                 '.herokuapp.com']
+                 'my-portfolio-site-18dba687e2d2.herokuapp.com']
 
 
 # Application definition
