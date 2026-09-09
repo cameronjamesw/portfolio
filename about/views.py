@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def about_page(request):
-    return HttpResponse("About Page")
+    return render(request, 'about.html')
 
 def certificates_url(request):
     return HttpResponse("Welcome to the certificates page!")

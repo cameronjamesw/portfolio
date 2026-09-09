@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="{% static 'css/about.css' %}" rel="stylesheet">
+ 
+<section class="about">
+  <div class="container">
+ 
+    <div class="row">
+      <div class="col-lg-8">
+        <p class="section-label">About</p>
+        <h1 class="about-heading">
+          A little more about <span class="text-accent">me</span>.
+        </h1>
+        <p class="about-body">
+          I'm Cameron, a software developer who enjoys turning ideas into
+          clean, working products. I care about writing code that's simple
+          to read and easy to maintain, and I like working through problems
+          from the ground up rather than settling for the first fix that
+          works.
+        </p>
+        <p class="about-body">
+          Outside of code, I'm usually learning something new, tinkering
+          with a side project, or figuring out how something works just for
+          the sake of it.
+        </p>
+      </div>
+    </div>
+ 
+    <div class="row mt-5 g-4">
+      <div class="col-md-6">
+        <a href="{% url 'education' %}" class="about-link-card">
+          <div class="about-link-icon">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+          <div>
+            <h2 class="about-link-title">Education</h2>
+            <p class="about-link-text">Where I studied and what I learned.</p>
+          </div>
+          <i class="bi bi-arrow-right about-link-arrow"></i>
+        </a>
+      </div>
+ 
+      <div class="col-md-6">
+        <a href="{% url 'experience' %}" class="about-link-card">
+          <div class="about-link-icon">
+            <i class="bi bi-briefcase"></i>
+          </div>
+          <div>
+            <h2 class="about-link-title">Work Experience</h2>
+            <p class="about-link-text">Roles I've held and what I built.</p>
+          </div>
+          <i class="bi bi-arrow-right about-link-arrow"></i>
+        </a>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+{% endblock %}
