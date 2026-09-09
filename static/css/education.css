@@ -1,0 +1,128 @@
+.education {
+    padding: 5rem 0 6rem;
+}
+ 
+.education-heading {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+ 
+/* ---------- Timeline ---------- */
+.education-timeline {
+    position: relative;
+    padding-left: 1.75rem;
+    border-left: 2px solid var(--surface-border);
+}
+ 
+.education-item {
+    position: relative;
+    margin-bottom: 2.25rem;
+}
+ 
+.education-item:last-child {
+    margin-bottom: 0;
+}
+ 
+.education-marker {
+    position: absolute;
+    top: 0.4rem;
+    left: -2.05rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(238, 198, 67, 0.15);
+}
+ 
+/* ---------- Card ---------- */
+.education-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--bs-border-radius-lg);
+    padding: 1.5rem 1.75rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.education-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+ 
+.education-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+ 
+.education-qualification {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+ 
+.education-institution {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+ 
+.education-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+ 
+.education-level {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    background-color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 50rem;
+}
+ 
+.education-dates {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+ 
+/* ---------- Skill / technology tags ---------- */
+.education-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.1rem;
+}
+ 
+.tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50rem;
+    border: 1px solid var(--surface-border);
+    color: var(--bs-body-color);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+ 
+.tag-skill {
+    border-color: rgba(238, 198, 67, 0.35);
+    color: var(--accent);
+}
+ 
+.tag-tech {
+    color: var(--muted);
+}
+ 
+.education-empty {
+    color: var(--muted);
+}
+ 

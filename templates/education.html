@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<link href="{% static 'css/education.css' %}" rel="stylesheet">
+ 
+<section class="education">
+  <div class="container">
+ 
+    <p class="section-label">Education</p>
+    <h1 class="education-heading">
+      My academic <span class="text-accent">background</span>.
+    </h1>
+ 
+    <div class="education-timeline mt-5">
+      {% for entry in education_list %}
+        <div class="education-item">
+          <div class="education-marker"></div>
+ 
+          <div class="education-card">
+            <div class="education-card-header">
+              <div>
+                <h2 class="education-qualification">{{ entry.qualification }}</h2>
+                <p class="education-institution">
+                  {{ entry.institution }}{% if entry.location %} &middot; {{ entry.location }}{% endif %}
+                </p>
+              </div>
+ 
+              <div class="education-meta">
+                {% if entry.level %}
+                  <span class="education-level">{{ entry.get_level_display }}</span>
+                {% endif %}
+                <span class="education-dates">
+                  {{ entry.start_date|date:"M Y" }} &ndash;
+                  {% if entry.graduation_date %}{{ entry.graduation_date|date:"M Y" }}{% else %}Present{% endif %}
+                </span>
+              </div>
+            </div>
+ 
+            {% if entry.skills.all or entry.technologies.all %}
+              <div class="education-tags">
+                {% for skill in entry.skills.all %}
+                  <span class="tag tag-skill">{{ skill.name }}</span>
+                {% endfor %}
+                {% for tech in entry.technologies.all %}
+                  <span class="tag tag-tech">{{ tech.name }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <p class="education-empty">Education history coming soon.</p>
+      {% endfor %}
+    </div>
+ 
+  </div>
+</section>
+{% endblock %}
+ 

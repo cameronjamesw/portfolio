@@ -10,7 +10,7 @@ def certificates_url(request):
     return HttpResponse("Welcome to the certificates page!")
 
 def educaton_url(request):
-    return HttpResponse("Education Page")
+    return render(request, 'education.html')
 
 def exp_page(request):
     return HttpResponse("Experience Page")
