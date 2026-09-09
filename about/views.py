@@ -5,3 +5,4 @@ from django.http import HttpResponse
 
 def certificates_url(request):
     return HttpResponse("Welcome to the certificates page!")
+
