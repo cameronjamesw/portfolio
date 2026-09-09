@@ -1,4 +1,10 @@
 {% load static %}
+{% url 'index' as index %}
+{% url 'about' as about %}
+{% url 'projects' as projects %}
+{% url 'education' as education %}
+{% url 'experience' as experience %}
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
     <head>
@@ -28,9 +34,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.path == index %}active{% endif %}" href="{% url 'index' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.path == '/about/' or request.path == '/about/education/' or request.path == '/about/experience/' %}active{% endif %}" href="{% url 'about' %}">About</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.path == projects %}active{% endif %}" href="{% url 'projects' %}">Projects</a></li>
         <li class="nav-item ms-lg-2">
           <a href="#" class="btn btn-primary btn-nav-cta">Contact</a>
         </li>
