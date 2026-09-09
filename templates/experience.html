@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<link href="{% static 'css/experience.css' %}" rel="stylesheet">
+ 
+<section class="experience">
+  <div class="container">
+ 
+    <p class="section-label">Experience</p>
+    <h1 class="experience-heading">
+      Where I've <span class="text-accent">worked</span>.
+    </h1>
+ 
+    <div class="experience-timeline mt-5">
+      {% for entry in experience_list %}
+        <div class="experience-item">
+          <div class="experience-marker"></div>
+ 
+          <div class="experience-card">
+            <div class="experience-card-header">
+              <div>
+                <h2 class="experience-role">{{ entry.job_role }}</h2>
+                <p class="experience-company">
+                  {{ entry.company_name }}{% if entry.location %} &middot; {{ entry.location }}{% endif %}
+                </p>
+              </div>
+ 
+              <div class="experience-meta">
+                {% if entry.is_current %}
+                  <span class="experience-current">Current</span>
+                {% endif %}
+                <span class="experience-dates">
+                  {{ entry.start_date|date:"M Y" }} &ndash;
+                  {% if entry.end_date %}{{ entry.end_date|date:"M Y" }}{% else %}Present{% endif %}
+                </span>
+              </div>
+            </div>
+ 
+            {% if entry.description %}
+              <p class="experience-description">{{ entry.description }}</p>
+            {% endif %}
+ 
+            {% if entry.responsibilities %}
+              <ul class="experience-responsibilities">
+                {% for line in entry.responsibilities.splitlines %}
+                  {% if line %}
+                    <li>{{ line }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+ 
+            {% if entry.skills.all or entry.technologies.all %}
+              <div class="experience-tags">
+                {% for skill in entry.skills.all %}
+                  <span class="tag tag-skill">{{ skill.name }}</span>
+                {% endfor %}
+                {% for tech in entry.technologies.all %}
+                  <span class="tag tag-tech">{{ tech.name }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <p class="experience-empty">Work history coming soon.</p>
+      {% endfor %}
+    </div>
+ 
+  </div>
+</section>
+{% endblock %}
+ 

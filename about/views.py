@@ -13,4 +13,4 @@ def educaton_url(request):
     return render(request, 'education.html')
 
 def exp_page(request):
-    return HttpResponse("Experience Page")
+    return render(request, 'experience.html')
