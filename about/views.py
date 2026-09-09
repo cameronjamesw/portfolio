@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Education
+from .models import Education, Experience
 
 # Create your views here.
 
@@ -20,4 +20,9 @@ def educaton_url(request):
     return render(request, 'about/education.html', context)
 
 def exp_page(request):
-    return render(request, 'about/experience.html')
+    experience_list = Experience.objects.all().order_by('-end_date')
+
+    context = {
+        "experience_list": experience_list
+    }
+    return render(request, 'about/experience.html', context)
