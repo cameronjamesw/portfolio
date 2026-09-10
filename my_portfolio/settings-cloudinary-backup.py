@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+
+    'cloudinary',
     'about',
     'home',
     'projects'
@@ -130,11 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 # Cloudinary
-# CLOUDINARY_STORAGE = {
-#     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
-# }
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+}
 
-# STATICFILES_STORAGE = "my_portfolio.storage.NonStrictManifestStaticFilesStorage"
+STATICFILES_STORAGE = "my_portfolio.storage.NonStrictManifestStaticFilesStorage"
 
 MEDIA_URL = '/media/'
 
@@ -147,33 +150,24 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# if DEBUG:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "django.core.files.storage.FileSystemStorage",
-#         },
-#         "staticfiles": {
-#             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-#         },
-#     }
-# else:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-#         },
-#         "staticfiles": {
-#             "BACKEND": "my_portfolio.storage.NonStrictManifestStaticFilesStorage",
-#         },
-#     }
-
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-    },
-}
+if DEBUG:
+    STORAGES = {
+        "default": {
+            "BACKEND": "django.core.files.storage.FileSystemStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        },
+    }
+else:
+    STORAGES = {
+        "default": {
+            "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
+        },
+        "staticfiles": {
+            "BACKEND": "my_portfolio.storage.NonStrictManifestStaticFilesStorage",
+        },
+    }
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
