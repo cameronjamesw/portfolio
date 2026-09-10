@@ -14,10 +14,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 import dj_database_url
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
@@ -28,6 +28,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+
+#Cloudinary
+cloudinary.config(
+    cloudinary_url=os.environ.get('CLOUDINARY_URL')
+)
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
@@ -42,7 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+
     'django.contrib.staticfiles',
+    'cloudinary',
+
     'about',
     'home',
     'projects'
@@ -129,13 +137,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
-# Cloudinary
-# CLOUDINARY_STORAGE = {
-#     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
-# }
-
-# STATICFILES_STORAGE = "my_portfolio.storage.NonStrictManifestStaticFilesStorage"
-
 MEDIA_URL = '/media/'
 
 # Static files
@@ -146,25 +147,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-# if DEBUG:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "django.core.files.storage.FileSystemStorage",
-#         },
-#         "staticfiles": {
-#             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-#         },
-#     }
-# else:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
-#         },
-#         "staticfiles": {
-#             "BACKEND": "my_portfolio.storage.NonStrictManifestStaticFilesStorage",
-#         },
-#     }
 
 STORAGES = {
     "default": {

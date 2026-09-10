@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -7,7 +8,7 @@ class Project(models.Model):
     description = models.TextField(blank=True)
     github_url = models.URLField(blank=True)
     live_url = models.URLField(blank=True)
-    image = models.ImageField(upload_to="projects/", blank=True)
+    image = CloudinaryField("image", blank=True)
     start_date = models.DateField()
     completion_date = models.DateField(blank=True, null=True)
 
