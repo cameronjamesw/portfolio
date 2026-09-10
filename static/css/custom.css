@@ -179,6 +179,11 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* Footer */
+.footer {
+    color: #6c757d;
+}
+
 /* Mobile screens */
 @media screen and (max-width: 576px) {
     .hero-avatar {
