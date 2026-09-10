@@ -202,9 +202,31 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 - [ChatGPT](https://chatgpt.com/) used for ERD configuraton and debugging assistance.
 
+- [Neon](https://neon.com/) used for database hosting.
+
+- [Heroku](https://www.heroku.com/) used for deployment.
+
+- [GitHub](https://github.com/) used for hosting and version control.
+
+- [VSCode](https://code.visualstudio.com/download?_exp_download=d53503e735) used for coding and IDE management.
+
 ## Languages
 
+- HTML
+
+- CSS
+
+- Javascript
+
+- Python
+
+- PostgreSQL
+
+- Git
+
 ## Libraries & Frameworks
+
+- [Bootstrap](https://getbootstrap.com/) used for styling.
 
 ## Hosting
 
