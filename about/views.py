@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Education, Experience
+from .models import Education, Experience, Certification
 
 # Create your views here.
 
@@ -8,7 +8,13 @@ def about_page(request):
     return render(request, 'about/about.html')
 
 def certificates_url(request):
-    return HttpResponse("Welcome to the certificates page!")
+    certification_list = Certification.objects.all().order_by('-date_completed').prefetch_related('skills')
+
+    context = {
+        "certification_list":certification_list
+    }
+
+    return render(request, 'about/certifications.html', context)
 
 def educaton_url(request):
     education_list = Education.objects.all().order_by('-graduation_date')

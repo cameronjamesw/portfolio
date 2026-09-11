@@ -1,0 +1,130 @@
+.certifications {
+    padding: 5rem 0 6rem;
+}
+ 
+.certifications-heading {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+ 
+/* ---------- Timeline ---------- */
+.certifications-timeline {
+    position: relative;
+    padding-left: 1.75rem;
+    border-left: 2px solid var(--surface-border);
+}
+ 
+.certification-item {
+    position: relative;
+    margin-bottom: 2.25rem;
+}
+ 
+.certification-item:last-child {
+    margin-bottom: 0;
+}
+ 
+.certification-marker {
+    position: absolute;
+    top: 0.4rem;
+    left: -2.05rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(238, 198, 67, 0.15);
+}
+ 
+/* ---------- Card ---------- */
+.certification-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--bs-border-radius-lg);
+    padding: 1.5rem 1.75rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.certification-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+ 
+.certification-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+ 
+.certification-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+ 
+.certification-provider {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+ 
+.certification-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+ 
+.certification-dates {
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+ 
+/* ---------- Skill tags ---------- */
+.certification-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.1rem;
+}
+ 
+.tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50rem;
+    border: 1px solid var(--surface-border);
+    color: var(--bs-body-color);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+ 
+.tag-skill {
+    border-color: rgba(238, 198, 67, 0.35);
+    color: var(--accent);
+}
+ 
+/* ---------- Credential link ---------- */
+.certification-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+}
+ 
+.certification-link:hover {
+    color: #f5d876;
+    text-decoration: underline;
+}
+ 
+.certifications-empty {
+    color: var(--muted);
+}
+ 

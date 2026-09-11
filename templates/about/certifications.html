@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<link href="{% static 'css/certifications.css' %}" rel="stylesheet">
+ 
+<section class="certifications">
+  <div class="container">
+ 
+    <p class="section-label">Certifications</p>
+    <h1 class="certifications-heading">
+      Certifications I've <span class="text-accent">earned</span>.
+    </h1>
+ 
+    <div class="certifications-timeline mt-5">
+      {% for entry in certification_list %}
+        <div class="certification-item">
+          <div class="certification-marker"></div>
+ 
+          <div class="certification-card">
+            <div class="certification-card-header">
+              <div>
+                <h2 class="certification-name">{{ entry.name }}</h2>
+                <p class="certification-provider">{{ entry.provider }}</p>
+              </div>
+ 
+              <div class="certification-meta">
+                <span class="certification-dates">
+                  {{ entry.date_completed|date:"M Y" }}
+                  {% if entry.expiry_date %}
+                    &ndash; {{ entry.expiry_date|date:"M Y" }}
+                  {% endif %}
+                </span>
+              </div>
+            </div>
+ 
+            {% if entry.skills.all %}
+              <div class="certification-tags">
+                {% for skill in entry.skills.all %}
+                  <span class="tag tag-skill">{{ skill.name }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+ 
+            {% if entry.credential_url %}
+              <a href="{{ entry.credential_url }}" target="_blank" rel="noopener" class="certification-link">
+                View credential <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <p class="certifications-empty">Certifications coming soon.</p>
+      {% endfor %}
+    </div>
+ 
+  </div>
+</section>
+{% endblock %}
