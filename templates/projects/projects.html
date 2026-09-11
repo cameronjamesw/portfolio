@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block content %}
+<link href="{% static 'css/projects.css' %}" rel="stylesheet">
+ 
+<section class="projects">
+  <div class="container">
+ 
+    <p class="section-label">Projects</p>
+    <h1 class="projects-heading">
+      Things I've <span class="text-accent">built</span>.
+    </h1>
+ 
+    <!-- Technology filter bar -->
+    <div class="filter-bar mt-4">
+      <a href="{% url 'projects' %}"
+         class="filter-pill {% if not selected_technology %}active{% endif %}">
+        All
+      </a>
+      {% for tech in technologies %}
+        <a href="?technology={{ tech.id }}"
+           class="filter-pill {% if selected_technology == tech.id|stringformat:'s' %}active{% endif %}">
+          {% if tech.icon %}<i class="bi {{ tech.icon }}"></i>{% endif %}
+          {{ tech.name }}
+        </a>
+      {% endfor %}
+    </div>
+ 
+    <!-- Project grid -->
+    <div class="row mt-4 g-4">
+      {% for project in project_list %}
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+ 
+            {% if project.image %}
+              <div class="project-image-wrap">
+                <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-image">
+              </div>
+            {% endif %}
+ 
+            <div class="project-body">
+              <h2 class="project-title">{{ project.title }}</h2>
+ 
+              <p class="project-dates">
+                {{ project.start_date|date:"M Y" }}
+                {% if project.completion_date %}
+                  &ndash; {{ project.completion_date|date:"M Y" }}
+                {% else %}
+                  &ndash; Ongoing
+                {% endif %}
+              </p>
+ 
+              {% if project.description %}
+                <p class="project-description">{{ project.description|truncatewords:28 }}</p>
+              {% endif %}
+ 
+              {% if project.technologies.all or project.skills.all %}
+                <div class="project-tags">
+                  {% for tech in project.technologies.all %}
+                    <span class="tag tag-tech">{{ tech.name }}</span>
+                  {% endfor %}
+                  {% for skill in project.skills.all %}
+                    <span class="tag tag-skill">{{ skill.name }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+ 
+              <div class="project-links">
+                {% if project.github_url %}
+                  <a href="{{ project.github_url }}" target="_blank" rel="noopener" class="project-link">
+                    <i class="bi bi-github"></i> Code
+                  </a>
+                {% endif %}
+                {% if project.live_url %}
+                  <a href="{{ project.live_url }}" target="_blank" rel="noopener" class="project-link">
+                    <i class="bi bi-box-arrow-up-right"></i> Live
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+      {% empty %}
+        <p class="projects-empty">
+          {% if selected_technology %}
+            No projects found using this technology yet.
+          {% else %}
+            Projects coming soon.
+          {% endif %}
+        </p>
+      {% endfor %}
+    </div>
+ 
+  </div>
+</section>
+{% endblock %}
+ 
