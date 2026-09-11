@@ -184,6 +184,29 @@ h1, h2, h3, h4, h5, h6 {
     color: #6c757d;
 }
 
+/* ---------- Back link ---------- */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    color: #d7d9dc;
+    font-size: 1.1rem;
+    position: relative;
+    top: -3rem;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.back-button:hover {
+    background-color: var(--accent);
+    color: #1c1e22;
+    transform: translateX(-3px);
+}
+
 /* Mobile screens */
 @media screen and (max-width: 576px) {
     .hero-avatar {
