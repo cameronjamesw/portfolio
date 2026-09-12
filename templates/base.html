@@ -5,6 +5,7 @@
 {% url 'education' as education %}
 {% url 'experience' as experience %}
 {% url 'certifications' as certifications %}
+{% url 'contact' as contact %}
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
@@ -32,7 +33,7 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg mx-lg-5 md-p-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{% url 'index' %}">
     <img src="{% static 'images/favicon(2).png' %}" alt="CJW Logo" class="navbar-logo">
     Cameron Wheatley
 </a>
@@ -45,7 +46,7 @@
         <li class="nav-item"><a class="nav-link {% if request.path == '/about/' or request.path == '/about/education/' or request.path == '/about/experience/' %}active{% endif %}" href="{% url 'about' %}">About</a></li>
         <li class="nav-item"><a class="nav-link {% if request.path == projects %}active{% endif %}" href="{% url 'projects' %}">Projects</a></li>
         <li class="nav-item ms-lg-2">
-          <a href="#" class="btn btn-primary btn-nav-cta">Contact</a>
+          <a href="{% url 'contact' %}" class="btn btn-primary btn-nav-cta">Contact</a>
         </li>
       </ul>
     </div>
