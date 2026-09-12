@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-logo {
-    height: 1.6rem;   /* roughly matches your navbar-brand font-size */
+    height: 5rem;   /* roughly matches your navbar-brand font-size */
     width: auto;      /* preserves aspect ratio */
     margin-right: 0.5rem;
     vertical-align: middle;
@@ -221,4 +221,8 @@ h1, h2, h3, h4, h5, h6 {
         height: 160px;
         box-shadow: 0 0 0 3px rgba(238, 198, 67, 0.08);
     }
+
+    .navbar-logo {
+    height: 2rem;   /* roughly matches your navbar-brand font-size */
+}
 }
