@@ -74,6 +74,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent);
 }
 
+.navbar-logo {
+    height: 1.6rem;   /* roughly matches your navbar-brand font-size */
+    width: auto;      /* preserves aspect ratio */
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
 /* ---------- Buttons ---------- */
 /* Pill-shaped accent button used for Contact / Projects / Contact CTA */
 .btn {
