@@ -210,6 +210,10 @@ I envisage my portfolio having two main categories of audience - potential clien
 
 - [VSCode](https://code.visualstudio.com/download?_exp_download=d53503e735) used for coding and IDE management.
 
+- [GoDaddy](https://godaddy.com) for domain name hosting
+
+- [CloudFlare](https://dash.cloudflare.com/) for domain name hosting and DNS configuration.
+
 ## Languages
 
 - HTML
