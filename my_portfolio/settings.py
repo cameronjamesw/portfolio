@@ -36,7 +36,10 @@ cloudinary.config(
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
-                 'my-portfolio-site-18dba687e2d2.herokuapp.com']
+                 'my-portfolio-site-18dba687e2d2.herokuapp.com',
+                 "cameronjwheatley.com",
+                 "www.cameronjwheatley.com",
+                 ]
 
 
 # Application definition
