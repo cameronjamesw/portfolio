@@ -41,6 +41,12 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  "www.cameronjwheatley.com",
                  ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://www.cameronjwheatley.com",
+    "https://*.herokuapp.com",
+    "https://cameronjwheatley.com",
+]
+
 
 # Application definition
 
