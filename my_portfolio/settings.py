@@ -36,14 +36,12 @@ cloudinary.config(
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
-                 'my-portfolio-site-18dba687e2d2.herokuapp.com',
                  "cameronjwheatley.com",
                  "www.cameronjwheatley.com",
                  ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://www.cameronjwheatley.com",
-    "https://*.herokuapp.com",
     "https://cameronjwheatley.com",
 ]
 
