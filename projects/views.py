@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Project, Language, Technology
 
 # Create your views here.
@@ -25,3 +25,19 @@ def project_list_url(request):
         'selected_technology': selected_technology,
         'selected_language': selected_language,
     })
+
+def project_detail_url(request):
+
+    project_list = Project.objects.all().prefetch_related('technologies', 'skills')
+    project = get_object_or_404(project_list, id=id)
+
+    context = {
+        "project_list": project_list,
+        "project": project
+    }
+
+    return render(
+        request,
+        "projects.projects_detail.html",
+        context
+    )
