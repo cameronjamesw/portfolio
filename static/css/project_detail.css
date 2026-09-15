@@ -54,14 +54,6 @@
     gap: 0.5rem;
 }
  
-/* Reuses .tag / .tag-skill / .tag-tech from the shared design system;
-   .tag-lang added here since Languages is specific to this page */
-.tag-lang {
-    border-color: rgba(238, 198, 67, 0.35);
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.05);
-}
- 
 /* ---------- Right column: title, description, links ---------- */
 .project-detail-category {
     font-size: 0.72rem;
