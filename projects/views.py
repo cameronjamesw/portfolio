@@ -1,20 +1,27 @@
 from django.shortcuts import render
-from .models import Project, Technology
+from .models import Project, Language, Technology
 
 # Create your views here.
 
 def project_list_url(request):
-    technology_id = request.GET.get('technology')
+    technologies = Technology.objects.all().order_by('category', 'name')
+    languages = Language.objects.all()
+
+    selected_technology = request.GET.get('technology')
+    selected_language = request.GET.get('language')
 
     project_list = Project.objects.all().prefetch_related('technologies', 'skills').order_by('-start_date')
 
-    if technology_id:
-        project_list = project_list.filter(technologies__id=technology_id)
+    if selected_technology:
+        projects = projects.filter(technologies__id=selected_technology)
 
-    technologies = Technology.objects.all().order_by('category', 'name')
+    if selected_language:
+        projects = projects.filter(languages__id=selected_language)
 
     return render(request, 'projects/projects.html', {
         'project_list': project_list,
         'technologies': technologies,
-        'selected_technology': technology_id,
+        'languages': languages,
+        'selected_technology': selected_technology,
+        'selected_language': selected_language,
     })

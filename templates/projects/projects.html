@@ -12,15 +12,15 @@
       Things I've <span class="text-accent">built</span>.
     </h1>
  
-    <!-- Technology filter bar -->
+    <!-- Language filter bar -->
     <div class="filter-bar mt-4">
       <a href="{% url 'projects' %}"
-         class="filter-pill {% if not selected_technology %}active{% endif %}">
+         class="filter-pill {% if not selected_language %}active{% endif %}">
         All
       </a>
-      {% for tech in technologies %}
-        <a href="?technology={{ tech.id }}"
-           class="filter-pill {% if selected_technology == tech.id|stringformat:'s' %}active{% endif %}">
+      {% for lang in languages %}
+        <a href="?language={{ lang.id }}"
+           class="filter-pill {% if selected_language == tech.id|stringformat:'s' %}active{% endif %}">
           {% if tech.icon %}<i class="bi {{ tech.icon }}"></i>{% endif %}
           {{ tech.name }}
         </a>
