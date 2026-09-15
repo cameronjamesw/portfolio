@@ -1,0 +1,111 @@
+.project-detail {
+    padding: 3rem 0 6rem;
+}
+ 
+.project-panel {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--bs-border-radius-lg);
+    padding: 2.5rem;
+}
+ 
+/* ---------- Left column: device image ---------- */
+.project-detail-image-wrap {
+    width: 100%;
+    border-radius: var(--bs-border-radius);
+    overflow: hidden;
+    background-color: #14161a;
+}
+ 
+.project-detail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+ 
+/* ---------- Skills / Technologies / Languages rows ---------- */
+.project-meta-rows {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+ 
+.project-meta-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+ 
+.project-meta-label {
+    flex: 0 0 auto;
+    width: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 0.35rem;
+}
+ 
+.project-meta-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+ 
+/* Reuses .tag / .tag-skill / .tag-tech from the shared design system;
+   .tag-lang added here since Languages is specific to this page */
+.tag-lang {
+    border-color: rgba(238, 198, 67, 0.35);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+ 
+/* ---------- Right column: title, description, links ---------- */
+.project-detail-category {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+ 
+.project-detail-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.1rem;
+}
+ 
+.project-detail-description {
+    font-size: 0.9rem;
+    color: var(--bs-body-color);
+    margin-bottom: 1rem;
+    max-width: 34rem;
+}
+ 
+/* ---------- Links ---------- */
+.project-links {
+    display: flex;
+    gap: 1.1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+ 
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+ 
+.project-link:hover {
+    color: var(--accent);
+}

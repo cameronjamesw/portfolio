@@ -26,18 +26,21 @@ def project_list_url(request):
         'selected_language': selected_language,
     })
 
-def project_detail_url(request):
+def project_detail_url(request, pk):
 
-    project_list = Project.objects.all().prefetch_related('technologies', 'skills')
-    project = get_object_or_404(project_list, id=id)
+    project = get_object_or_404(
+        Project.objects.prefetch_related('skills', 'technologies', 'languages'),
+        id=pk
+    )
 
     context = {
-        "project_list": project_list,
-        "project": project
+        'project': project,
+        'technologies': project.technologies.all(),
+        'languages': project.languages.all(),
     }
 
     return render(
         request,
-        "projects.projects_detail.html",
+        "projects/project_detail.html",
         context
     )

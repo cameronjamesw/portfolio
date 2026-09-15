@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="{% static 'css/project_detail.css' %}" rel="stylesheet">
+<link href="{% static 'css/projects.css' %}" rel="stylesheet">
+
+<section class="project-detail">
+  <div class="container">
+
+    <div class="project-panel">
+      <div class="row g-5 align-items-start">
+
+        <!-- Left: device mockup image + skills/technologies/languages rows -->
+        <div class="col-lg-6">
+          {% if project.image %}
+          <div class="project-detail-image-wrap">
+            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-detail-image">
+          </div>
+          {% endif %}
+
+          <div class="project-meta-rows">
+            {% if project.skills.all %}
+            <div class="project-meta-row">
+              <span class="project-meta-label">Skills</span>
+              <div class="project-meta-tags">
+                {% for skill in project.skills.all %}
+                <span class="tag tag-skill">{{ skill.name }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if technologies %}
+            <div class="project-meta-row">
+              <span class="project-meta-label">Technologies</span>
+              <div class="project-meta-tags">
+                {% for tech in technologies %}
+                <span class="tag tag-tech">{{ tech.name }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if languages %}
+            <div class="project-meta-row">
+              <span class="project-meta-label">Languages</span>
+              <div class="project-meta-tags">
+                {% for lang in languages %}
+                <span class="tag tag-lang">{{ lang.name }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Right: title, description, links -->
+        <div class="col-lg-6">
+          {% if languages %}
+          <p class="project-detail-category">
+            {% for lang in languages %}{{ lang.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+          </p>
+          {% endif %}
+
+          <h1 class="project-detail-title">{{ project.title }}</h1>
+
+          {% if project.description %}
+          {% for paragraph in project.description.splitlines %}
+          {% if paragraph %}
+          <p class="project-detail-description">{{ paragraph }}</p>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+
+          <div class="project-links">
+            {% if project.github_url %}
+            <a href="{{ project.github_url }}" target="_blank" rel="noopener" class="project-link">
+              <i class="bi bi-github"></i> Code
+            </a>
+            {% endif %}
+            {% if project.live_url %}
+            <a href="{{ project.live_url }}" target="_blank" rel="noopener" class="project-link">
+              <i class="bi bi-box-arrow-up-right"></i> Live
+            </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
