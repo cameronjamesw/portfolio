@@ -20,9 +20,9 @@
       </a>
       {% for lang in languages %}
         <a href="?language={{ lang.id }}"
-           class="filter-pill {% if selected_language == tech.id|stringformat:'s' %}active{% endif %}">
-          {% if tech.icon %}<i class="bi {{ tech.icon }}"></i>{% endif %}
-          {{ tech.name }}
+           class="filter-pill {% if selected_language == lang.id|stringformat:'s' %}active{% endif %}">
+          {% if lang.icon %}<i class="{{ lang.icon }}"></i>{% endif %}
+          {{ lang.name }}
         </a>
       {% endfor %}
     </div>

@@ -13,10 +13,10 @@ def project_list_url(request):
     project_list = Project.objects.all().prefetch_related('technologies', 'skills').order_by('-start_date')
 
     if selected_technology:
-        projects = projects.filter(technologies__id=selected_technology)
+        project_list = project_list.filter(technologies__id=selected_technology)
 
     if selected_language:
-        projects = projects.filter(languages__id=selected_language)
+        project_list = project_list.filter(languages__id=selected_language)
 
     return render(request, 'projects/projects.html', {
         'project_list': project_list,
