@@ -36,8 +36,12 @@
                   <span class="experience-current">Current</span>
                 {% endif %}
                 <span class="experience-dates">
+                  {% if entry.job_role == "Social Media Manager" %}
+                  Summer 2022 | Summer 2023 | Summer 2024
+                  {% else %}
                   {{ entry.start_date|date:"M Y" }} &ndash;
                   {% if entry.end_date %}{{ entry.end_date|date:"M Y" }}{% else %}Present{% endif %}
+                  {% endif %}
                 </span>
               </div>
             </div>
