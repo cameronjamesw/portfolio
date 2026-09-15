@@ -12,6 +12,7 @@ class Project(models.Model):
     completion_date = models.DateField(blank=True, null=True)
 
     technologies = models.ManyToManyField("Technology", blank=True)
+    languages = models.ManyToManyField("Language", blank=True)
     skills = models.ManyToManyField("Skill", blank=True)
 
     def __str__(self):
@@ -35,6 +36,14 @@ class Technology(models.Model):
         blank=True
     )
     icon = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class Language(models.Model):
+    name = models.CharField(max_length=20, blank=True)
+    icon = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
         return self.name
