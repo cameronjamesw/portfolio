@@ -152,3 +152,9 @@
 .experience-empty {
     color: var(--muted);
 }
+
+.experience-intro {
+    color: var(--bs-body-color);
+    max-width: 38rem;
+    margin-top: 1rem;
+}
