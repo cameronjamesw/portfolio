@@ -11,6 +11,12 @@
     <h1 class="projects-heading">
       Things I've <span class="text-accent">built</span>.
     </h1>
+    <p class="projects-intro">
+      These projects were built during my time as a developer, but they show
+      exactly the skills IT support relies on - breaking down problems,
+      working through unfamiliar systems, and getting things running when
+      they don't work as expected.
+    </p>
 
     <!-- Language filter bar -->
     <div class="filter-bar mt-4">
@@ -52,7 +58,7 @@
               </p>
 
               {% if project.description %}
-              <p class="project-description">{{ project.description|truncatewords:28 }}</p>
+              <p class="project-description">{{ project.description|truncatewords:20 }}</p>
               {% endif %}
 
               {% if project.technologies.all or project.skills.all %}

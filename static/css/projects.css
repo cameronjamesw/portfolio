@@ -157,4 +157,10 @@
 .projects-empty {
     color: var(--muted);
 }
- 
+
+.projects-intro {
+    color: var(--bs-body-color);
+    max-width: 38rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
