@@ -17,7 +17,7 @@
     </h1>
     <p class="experience-intro">
       My previous roles have been customer-focused, but they've given me the same skills IT support relies on:
-      troubleshooting, clear communication, and staying calm under pressure.
+      problem-solving, clear communication, and staying calm under pressure.
     </p>
 
     <div class="experience-timeline mt-5">
@@ -61,6 +61,21 @@
             {% endif %}
             {% endfor %}
           </ul>
+          {% endif %}
+
+          {% if entry.achievements %}
+          <div class="experience-achievements">
+            <p class="experience-achievements-label">
+              <i class="bi bi-trophy"></i> Key Achievements
+            </p>
+            <ul class="experience-achievements-list">
+              {% for line in entry.achievements.splitlines %}
+              {% if line %}
+              <li>{{ line }}</li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
           {% endif %}
 
           {% if entry.skills.all or entry.technologies.all %}

@@ -158,3 +158,42 @@
     max-width: 38rem;
     margin-top: 1rem;
 }
+
+.experience-achievements {
+    margin-top: 1rem;
+    padding: 0.9rem 1.1rem;
+    background-color: rgba(238, 198, 67, 0.06);
+    border: 1px solid rgba(238, 198, 67, 0.2);
+    border-radius: var(--bs-border-radius);
+}
+
+.experience-achievements-label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.experience-achievements-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.875rem;
+    color: var(--bs-body-color);
+}
+
+.experience-achievements-list li {
+    margin-bottom: 0.3rem;
+}
+
+.experience-achievements-list li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-achievements-list li::marker {
+    color: var(--accent);
+}

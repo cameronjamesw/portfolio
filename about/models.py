@@ -78,6 +78,7 @@ class Experience(models.Model):
 
     description = models.TextField(blank=True)
     responsibilities = models.TextField(blank=True)
+    achievements = models.TextField(blank=True) 
 
     start_date = models.DateField()
     end_date = models.DateField(
